@@ -23,7 +23,7 @@
   </head>
   <body>
 <button id="show_list">Show Tracks</button>
-
+<button id="add_song">Add Song</button>
     <div class="hero-unit">
       <h1>Now Playing</h1>
 
@@ -45,7 +45,7 @@
         <input type="text" id="coffee_artist" placeholder="Artist" />
         <input type="text" id="coffee_genre" placeholder="Genre" />
         <input type="text" id="coffee_bpm" placeholder="BPM" />
-        <button>Add Coffee</button>
+        <button id="submit_song">Add Coffee</button>
         </form>
         <hr />
     </script>
@@ -74,7 +74,7 @@
             <div class="card-copy">
                 <textarea id="update_comments"><%= comments %></textarea>
             </div>
-            <button>Update Coffee</button>
+            <button id="updater">Update Coffee</button>
             <button id="delete">Delete</button>
         </form>
       </li>

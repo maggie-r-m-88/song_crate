@@ -10,10 +10,20 @@
 
   });
 
- $('#show_list').click(function(){
+ $('#show_list').on('click', function(event){
             $('#coffeeForm').hide();
-            $('#coffeeList').fadeIn();
-            $('#show_list').hide();
+            $('#coffeeList').show();
+
  });
+
+ $('#add_song').on('click', function(event){
+            $('#coffeeList').hide();
+            $('#coffeeForm').show();
+
+ });
+
+
+
+
 
 }());
