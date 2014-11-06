@@ -6,10 +6,8 @@
 
     defaults: {
       name: '',
-      brand: '',
       title: '',
       comments: '',
-      rating: '',
       artist: '',
       genre: '',
       bpm: ''
@@ -131,7 +129,6 @@
       this.options = options;
       this.render();
 
-  //    $('.test').hide();
       $('#coffeeForm').empty();
 
       // Get our Element On Our Page
