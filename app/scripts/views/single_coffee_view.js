@@ -6,8 +6,8 @@
     className: 'coffeeSingle',
 
     events: {
-      'submit #updateCoffee' : 'updateCoffee',
-      'click #delete' : 'deleteCoffee'
+      'submit #updateTrack' : 'updateTrack',
+      'click #delete' : 'deleteTrack'
 
     },
 
@@ -20,7 +20,7 @@
       $('#coffeeForm').empty();
 
       // Get our Element On Our Page
-      $('#coffeeList').html(this.$el);
+      $('#trackList').html(this.$el);
     },
 
     render: function () {
@@ -31,7 +31,7 @@
 
     },
 
-    updateCoffee: function (e) {
+    updateTrack: function (e) {
       e.preventDefault();
 
       // Update our Model Instance
@@ -54,7 +54,7 @@
 
     },
 
-    deleteCoffee: function (e) {
+    deleteTrack: function (e) {
       e.preventDefault();
 
       // Remove Coffee

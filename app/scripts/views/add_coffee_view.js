@@ -3,20 +3,20 @@
   App.Views.AddCoffee = Backbone.View.extend({
 
     events: {
-      'submit #addCoffee' : 'addCoffee'
+      'submit #addTrack' : 'addTrack'
     },
 
     initialize: function () {
       this.render();
 
-      $('#coffeeList').html(this.$el);
+      $('#trackList').html(this.$el);
     },
 
     render: function () {
       this.$el.html($('#addTemp').html());
     },
 
-    addCoffee: function (e) {
+    addTrack: function (e) {
       e.preventDefault();
 
       var c = new App.Models.Coffee({

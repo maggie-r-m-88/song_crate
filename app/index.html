@@ -44,7 +44,7 @@
           <button id="random">Random</button>
         </div>
 
-        <div id="coffeeList"></div>
+        <div id="trackList"></div>
 
     </div><!---end of hero unit-->
 
@@ -52,7 +52,7 @@
 
 
     <script type="text/template" id="addTemp">
-        <form id="addCoffee">
+        <form id="addTrack">
 
         <input type="text" id="coffee_title" placeholder="Title" />
         <input type="text" id="coffee_artist" placeholder="Artist" />
@@ -80,7 +80,7 @@
 
     <script type="text/template" id="singleTemp">
       <li class="card" id="<%= _id %>">
-        <form id="updateCoffee">
+        <form id="updateTrack">
             <div class="card-header">
               <input type="text" value="<%= title %>" id="update_title" />
               <input type="text" value="<%= artist %>" id="update_artist" />
