@@ -9,13 +9,21 @@
 
     routes: {
       '' : 'home',
+      'add' : 'addCoffee',
+    
       'edit/:id' : 'editCoffee'
     },
 
     home: function () {
-      new App.Views.AddCoffee();
       new App.Views.ListCoffee({ collection: App.coffees });
     },
+
+     addCoffee: function () {
+      new App.Views.AddCoffee();
+
+    },
+
+
 
     editCoffee: function (id) {
 

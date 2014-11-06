@@ -9,7 +9,7 @@
     initialize: function () {
       this.render();
 
-      $('#coffeeForm').html(this.$el);
+      $('#coffeeList').html(this.$el);
     },
 
     render: function () {
@@ -28,12 +28,16 @@
         comments: $('coffee_comments').val()
       });
 
-      App.coffees.add(c).save();
-    $('#addCoffee')[0].reset();
-  
+      App.coffees.add(c).save(null, {
+        success: function (){
+          App.router.navigate('', { trigger: true });
+        }
+
+
+      });
+
+
     }
-
-
 
 
   });
