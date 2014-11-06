@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>Coffee_Snob</title>
+    <title>MixList</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -22,20 +22,22 @@
     <!-- endbuild -->
   </head>
   <body>
+    <div id="body-container">
+<button id="home">Home</button>
 <button id="show_list">Show Tracks</button>
-<button id="add_song">Add Song</button>
+<button id="add_song">Add Track</button>
+
+<h1>Now Playing</h1>
     <div class="hero-unit">
-      <h1>Now Playing</h1>
-
-
-
-      <div id="coffeeForm"></div>
-<div id="coffeeList">
-
+<div class="main">
+     <h1>Finished Mixes</h1>
+     <h2> Will go here </h2>
 </div>
+<div id="coffeeForm"></div>
+<div id="coffeeList"></div>
 
     </div><!---end of hero unit-->
-
+</div> <!---end of container-->
 
 
     <script type="text/template" id="addTemp">
@@ -45,7 +47,7 @@
         <input type="text" id="coffee_artist" placeholder="Artist" />
         <input type="text" id="coffee_genre" placeholder="Genre" />
         <input type="text" id="coffee_bpm" placeholder="BPM" />
-        <button id="submit_song">Add Coffee</button>
+        <button id="submit_song">Add Track</button>
         </form>
         <hr />
     </script>
@@ -54,7 +56,7 @@
       <li class="card" id="<%= _id %>">
 
         <a href="#/edit/<%= _id %>">
-          <div class="card-header"><%= title %> and <%= artist %> of <%= genre %> w/ <%= bpm %>  </div>
+          <div class="card-header"> <p class="label"><%= artist %> - <%= title %> </p> <p class="bpm">   <%= bpm %>  </p><!--dont need genre <p class="genre"> <%= genre %> right now--</p>--></div>
           <% if(comments !== '') { %>
               <div class="card-copy"><p><%= comments %></p></div>
           <% } %>
@@ -74,7 +76,7 @@
             <div class="card-copy">
                 <textarea id="update_comments"><%= comments %></textarea>
             </div>
-            <button id="updater">Update Coffee</button>
+            <button id="updater">Update Track</button>
             <button id="delete">Delete</button>
         </form>
       </li>

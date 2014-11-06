@@ -30,6 +30,7 @@
 
       App.coffees.add(c).save();
     $('#addCoffee')[0].reset();
+  
     }
 
 
