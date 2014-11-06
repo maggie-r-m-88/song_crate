@@ -9,13 +9,13 @@
     initialize: function () {
       this.render();
       //make a new thing here//
-      $('.main').html(this.$el);
+      $('#trackList').html(this.$el);
     },
 
     render: function () {
       //this will be my script on the home page
       this.$el.html($('#homeView').html());
-    },
+    }
 
 
     //i dont think ill need a function for my home page yet.....
