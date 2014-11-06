@@ -12,7 +12,7 @@
 
 
 //  $('#home').on('click', function(){
-//    $('.main').show(200);
+//   $('.main').show(200);
 
 //  });
 

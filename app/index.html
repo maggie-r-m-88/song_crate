@@ -35,21 +35,17 @@
     <div class="header">
          <h1>MixList</h1>
     </div>
-
-
+<!--main page div will be here<div class="main"></div>-->
     <div class="hero-unit">
-        <div class="main">
-          <h1>Finished Mixes</h1>
-          <h2> Will go here </h2>
-          <button id="random">Random</button>
-        </div>
-
         <div id="trackList"></div>
 
-    </div><!---end of hero unit-->
+  </div><!---end of hero unit-->
 
   </div> <!---end of container-->
-
+    <script type="text/template" id="homeView">
+      <h1>THIS IS A TEST</h1>
+      <h2>info about my app </h2>
+    </script>
 
     <script type="text/template" id="addTemp">
         <form id="addTrack">
@@ -120,6 +116,7 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/models/trackmodel.js"></script>
     <script src="scripts/collections/trackscollection.js"></script>
+    <script src="scripts/views/home_view.js"></script>
     <script src="scripts/views/add_track_view.js"></script>
     <script src="scripts/views/list_tracks_view.js"></script>
     <script src="scripts/views/update_track_view.js"></script>

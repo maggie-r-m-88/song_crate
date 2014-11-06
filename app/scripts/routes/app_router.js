@@ -16,6 +16,7 @@
 
     home: function () {
       // create home view here i guess//
+      new App.Views.Home();
     },
 
      addTrack: function () {
@@ -27,7 +28,7 @@
        new App.Views.ListTrack({ collection: App.tracks });
      },
 
-    editTrack: function (id) {
+     editTrack: function (id) {
 
       var c = App.tracks.get(id);
       new App.Views.SingleTrack({ track: c });

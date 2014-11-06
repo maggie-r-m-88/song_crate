@@ -1,22 +1,25 @@
 (function () {
 
-  App.Views.AddTrack = Backbone.View.extend({
+  App.Views.Home = Backbone.View.extend({
 
     events: {
-      'submit #addTrack' : 'addTrack'
+    //  'submit #addTrack' : 'addTrack'
     },
 
     initialize: function () {
       this.render();
-
-      $('#trackList').html(this.$el);
+      //make a new thing here//
+      $('.main').html(this.$el);
     },
 
     render: function () {
-      this.$el.html($('#addTemp').html());
+      //this will be my script on the home page
+      this.$el.html($('#homeView').html());
     },
 
-    addTrack: function (e) {
+
+    //i dont think ill need a function for my home page yet.....
+/*    addTrack: function (e) {
       e.preventDefault();
 
       var c = new App.Models.Track({
@@ -35,9 +38,9 @@
         }
       });
 
-    }
+    }*/
 
-  
+
   });
 
 }());

@@ -66,12 +66,13 @@ body {
     font-size: 18px;
   }
 }
+//top console buttons
 #show_list, #add_song, #home{
   margin: 16px;
   background-color: $buttons;
   color: black;
 }
-
+//buttons within view consoles
 #submit_song, #updater{
   background-color: $yellow;
   color: black;
@@ -84,7 +85,7 @@ body {
   color: black;
 }
 
-
+//styling for tracklist goes here
 ul.allTracks{
   li{
     border: 2px solid black;
@@ -119,5 +120,5 @@ background-color: white;
 }
 
 .main{
- display: none;
+ border: 2px solid red;
 }
