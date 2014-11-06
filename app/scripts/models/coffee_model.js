@@ -6,10 +6,8 @@
 
     defaults: {
       name: '',
-      brand: '',
       title: '',
       comments: '',
-      rating: '',
       artist: '',
       genre: '',
       bpm: ''

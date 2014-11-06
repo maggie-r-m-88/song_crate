@@ -15,11 +15,15 @@
   </head>
   <body>
   <div id="body-container">
+    <div class="nav-bar">
          <button id="home">Home</button>
          <button id="show_list">Show Tracks</button>
          <button id="add_song">Add Track</button>
+    </div>
 
-<h1>Now Playing</h1>
+    <div class="header">
+         <h1>Now Playing</h1>
+    </div>
     <div class="hero-unit">
         <div class="main">
           <h1>Finished Mixes</h1>
@@ -54,8 +58,8 @@
           <div class="card-copy"><p><%= comments %></p></div>
           <% } %>
 
-        </a>
-      </li>
+           </a>
+        </li>
     </script>
 
     <script type="text/template" id="singleTemp">

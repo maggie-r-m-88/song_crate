@@ -16,7 +16,6 @@
       this.options = options;
       this.render();
 
-  //    $('.test').hide();
       $('#coffeeForm').empty();
 
       // Get our Element On Our Page
@@ -36,9 +35,6 @@
 
       // Update our Model Instance
       this.options.coffee.set({
-      //  name: $('#update_name').val(),
-      //  brand: $('#update_brand').val(),
-
         title: $('#update_title').val(),
         artist: $('#update_artist').val(),
         genre: $('#update_genre').val(),

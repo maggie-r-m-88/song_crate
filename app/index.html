@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Righteous|Francois+One|Nunito' rel='stylesheet' type='text/css'>
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -23,20 +24,30 @@
   </head>
   <body>
   <div id="body-container">
+
+    <div class="nav-bar">
          <button id="home">Home</button>
          <button id="show_list">Show Tracks</button>
          <button id="add_song">Add Track</button>
 
-<h1>Now Playing</h1>
+    </div>
+
+    <div class="header">
+         <h1>MixList</h1>
+    </div>
+
+
     <div class="hero-unit">
         <div class="main">
           <h1>Finished Mixes</h1>
           <h2> Will go here </h2>
+          <button id="random">Random</button>
         </div>
         <div id="coffeeForm"></div>
         <div id="coffeeList"></div>
 
     </div><!---end of hero unit-->
+
   </div> <!---end of container-->
 
 
@@ -62,8 +73,8 @@
           <div class="card-copy"><p><%= comments %></p></div>
           <% } %>
 
-        </a>
-      </li>
+           </a>
+        </li>
     </script>
 
     <script type="text/template" id="singleTemp">
