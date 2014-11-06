@@ -22,22 +22,22 @@
     <!-- endbuild -->
   </head>
   <body>
-    <div id="body-container">
-<button id="home">Home</button>
-<button id="show_list">Show Tracks</button>
-<button id="add_song">Add Track</button>
+  <div id="body-container">
+         <button id="home">Home</button>
+         <button id="show_list">Show Tracks</button>
+         <button id="add_song">Add Track</button>
 
 <h1>Now Playing</h1>
     <div class="hero-unit">
-<div class="main">
-     <h1>Finished Mixes</h1>
-     <h2> Will go here </h2>
-</div>
-<div id="coffeeForm"></div>
-<div id="coffeeList"></div>
+        <div class="main">
+          <h1>Finished Mixes</h1>
+          <h2> Will go here </h2>
+        </div>
+        <div id="coffeeForm"></div>
+        <div id="coffeeList"></div>
 
     </div><!---end of hero unit-->
-</div> <!---end of container-->
+  </div> <!---end of container-->
 
 
     <script type="text/template" id="addTemp">
@@ -56,9 +56,10 @@
       <li class="card" id="<%= _id %>">
 
         <a href="#/edit/<%= _id %>">
-          <div class="card-header"> <p class="label"><%= artist %> - <%= title %> </p> <p class="bpm">   <%= bpm %>  </p><!--dont need genre <p class="genre"> <%= genre %> right now--</p>--></div>
+          <div class="card-header"> <p class="label"><%= artist %> - <%= title %> </p> <p class="bpm">   <%= bpm %>  </p><!--dont need genre <p class="genre"> <%= genre %> right now--</p>-->
+          </div>
           <% if(comments !== '') { %>
-              <div class="card-copy"><p><%= comments %></p></div>
+          <div class="card-copy"><p><%= comments %></p></div>
           <% } %>
 
         </a>
