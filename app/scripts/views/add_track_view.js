@@ -1,6 +1,6 @@
 (function () {
 
-  App.Views.AddCoffee = Backbone.View.extend({
+  App.Views.AddTrack = Backbone.View.extend({
 
     events: {
       'submit #addTrack' : 'addTrack'
@@ -19,17 +19,17 @@
     addTrack: function (e) {
       e.preventDefault();
 
-      var c = new App.Models.Coffee({
+      var c = new App.Models.Track({
 
-        title: $('#coffee_title').val(),
-        artist: $('#coffee_artist').val(),
-        genre: $('#coffee_genre').val(),
-        bpm: $('#coffee_bpm').val(),
-        number: $('#coffee_number').val(),
-        comments: $('coffee_comments').val()
+        title: $('#track_title').val(),
+        artist: $('#track_artist').val(),
+        genre: $('#track_genre').val(),
+        bpm: $('#track_bpm').val(),
+        number: $('#track_number').val(),
+        comments: $('#track_comments').val()
       });
 
-      App.coffees.add(c).save(null, {
+      App.tracks.add(c).save(null, {
         success: function (){
           App.router.navigate('list', { trigger: true });
         }

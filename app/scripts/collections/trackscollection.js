@@ -1,7 +1,7 @@
 (function () {
 
-  App.Collections.Coffees = Backbone.Collection.extend({
-    model: App.Models.Coffee,
+  App.Collections.Tracks = Backbone.Collection.extend({
+    model: App.Models.Track,
       comparator: function (model) {
       return parseInt(model.get('number'));
     },

@@ -1,9 +1,9 @@
 (function () {
 
-  App.Views.ListCoffee = Backbone.View.extend({
+  App.Views.ListTrack = Backbone.View.extend({
 
     tagName: 'ul',
-    className: 'allCoffees',
+    className: 'allTracks',
 
     events: {},
 

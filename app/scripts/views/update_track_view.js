@@ -1,9 +1,9 @@
 (function () {
 
-  App.Views.SingleCoffee = Backbone.View.extend({
-
+  App.Views.SingleTrack = Backbone.View.extend({
+    //each track will be an li under this ul
     tagName: 'ul',
-    className: 'coffeeSingle',
+    className: 'trackSingle',
 
     events: {
       'submit #updateTrack' : 'updateTrack',
@@ -17,8 +17,6 @@
       this.options = options;
       this.render();
 
-      $('#coffeeForm').empty();
-
       // Get our Element On Our Page
       $('#trackList').html(this.$el);
     },
@@ -27,7 +25,7 @@
 
       this.$el.empty();
 
-      this.$el.html(this.template(this.options.coffee.toJSON()));
+      this.$el.html(this.template(this.options.track.toJSON()));
 
     },
 
@@ -35,7 +33,7 @@
       e.preventDefault();
 
       // Update our Model Instance
-      this.options.coffee.set({
+      this.options.track.set({
 
         title: $('#update_title').val(),
         artist: $('#update_artist').val(),
@@ -47,7 +45,7 @@
       });
 
       // Save Instance
-      this.options.coffee.save();
+      this.options.track.save();
 
       // Go back to our home page
       App.router.navigate('list', {trigger: true});
@@ -58,7 +56,7 @@
       e.preventDefault();
 
       // Remove Coffee
-      this.options.coffee.destroy();
+      this.options.track.destroy();
 
       // Go home ET
       App.router.navigate('list', {trigger: true});

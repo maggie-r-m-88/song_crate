@@ -1,6 +1,6 @@
 (function () {
 
-  App.Models.Coffee = Backbone.Model.extend({
+  App.Models.Track = Backbone.Model.extend({
 
     idAttribute: '_id',
 

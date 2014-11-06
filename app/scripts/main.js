@@ -1,10 +1,10 @@
 (function () {
 
   // Create Instance of Collection
-  App.coffees = new App.Collections.Coffees();
+  App.tracks = new App.Collections.Tracks();
 
   // Fetch any server-side coffees
-  App.coffees.fetch().done( function () {
+  App.tracks.fetch().done( function () {
 
     App.router = new App.Routers.AppRouter();
 

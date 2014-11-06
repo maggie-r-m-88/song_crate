@@ -3,34 +3,34 @@
   App.Routers.AppRouter = Backbone.Router.extend({
 
     initialize: function () {
-      // Light the Fire
+
       Backbone.history.start();
     },
 
     routes: {
       '' : 'home',
-      'add' : 'addCoffee',
-      'list' : 'listCoffee',
-      'edit/:id' : 'editCoffee'
+      'add' : 'addTrack',
+      'list' : 'listTrack',
+      'edit/:id' : 'editTrack'
     },
 
     home: function () {
       // create home view here i guess//
     },
 
-     addCoffee: function () {
-      new App.Views.AddCoffee();
+     addTrack: function () {
+      new App.Views.AddTrack();
 
     },
 
-     listCoffee: function () {
-       new App.Views.ListCoffee({ collection: App.coffees });
+     listTrack: function () {
+       new App.Views.ListTrack({ collection: App.tracks });
      },
 
-    editCoffee: function (id) {
+    editTrack: function (id) {
 
-      var c = App.coffees.get(id);
-      new App.Views.SingleCoffee({ coffee: c });
+      var c = App.tracks.get(id);
+      new App.Views.SingleTrack({ track: c });
     }
 
   });
