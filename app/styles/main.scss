@@ -66,9 +66,13 @@ body {
     font-size: 18px;
   }
 }
+
+
+///update will go here
 .trackSingle {
   margin: 50px auto 0 auto;
   width: 600px;
+  position: relative;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
@@ -88,7 +92,26 @@ body {
     font-family: helvetica;
     font-size: 18px;
   }
+  #update_bpm{
+    position: absolute;
+    border: none;
+    color: white;
+    margin-top: -180px;
+    width: 155px;
+    padding: 0;
+    border-radius:6px;
+    font-size: 78px;
+    margin-left: 380px;
+      background-color: $machine;
+
+  }
 }
+
+
+
+
+
+
 //top console buttons
 #show_list, #add_song, #home{
   margin: 16px;

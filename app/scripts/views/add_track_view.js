@@ -23,7 +23,6 @@
 
         title: $('#track_title').val(),
         artist: $('#track_artist').val(),
-        genre: $('#track_genre').val(),
         bpm: $('#track_bpm').val(),
         number: $('#track_number').val(),
         comments: $('#track_comments').val()
@@ -33,11 +32,14 @@
         success: function (){
           App.router.navigate('list', { trigger: true });
         }
+
+
       });
+
 
     }
 
-  
+
   });
 
 }());

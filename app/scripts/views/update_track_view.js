@@ -37,7 +37,6 @@
 
         title: $('#update_title').val(),
         artist: $('#update_artist').val(),
-        genre: $('#update_genre').val(),
         comments: $('#update_comments').val(),
         bpm: $('#update_bpm').val(),
         number: $('#update_number').val()
