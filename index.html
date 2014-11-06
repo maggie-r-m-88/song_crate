@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="styles/vendor.css">
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Righteous|Francois+One|Nunito' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="styles/main.css">
 
@@ -15,34 +16,37 @@
   </head>
   <body>
   <div id="body-container">
+
     <div class="nav-bar">
-         <button id="home">Home</button>
-         <button id="show_list">Show Tracks</button>
-         <button id="add_song">Add Track</button>
+         <a href="/"><button id="home">Home</button></a>
+         <a href="/#list"><button id="show_list">Show Tracks</button></a>
+         <a href="/#add"><button id="add_song">Add Track</button></a>
+
     </div>
 
     <div class="header">
-         <h1>Now Playing</h1>
+         <h1>MixList</h1>
     </div>
-    <div class="hero-unit">
-        <div class="main">
-          <h1>Finished Mixes</h1>
-          <h2> Will go here </h2>
-        </div>
-        <div id="coffeeForm"></div>
-        <div id="coffeeList"></div>
 
-    </div><!---end of hero unit-->
+
+        <div id="trackList"></div>
+
+
+
   </div> <!---end of container-->
-
+    <script type="text/template" id="homeView">
+      <h1>THIS IS A TEST</h1>
+      <h2>info about my app </h2>
+    </script>
 
     <script type="text/template" id="addTemp">
-        <form id="addCoffee">
+        <form id="addTrack">
 
-        <input type="text" id="coffee_title" placeholder="Title" />
-        <input type="text" id="coffee_artist" placeholder="Artist" />
-        <input type="text" id="coffee_genre" placeholder="Genre" />
-        <input type="text" id="coffee_bpm" placeholder="BPM" />
+        <input type="text" id="track_title" placeholder="Title" />
+        <input type="text" id="track_artist" placeholder="Artist" />
+        <input type="text" id="track_genre" placeholder="Genre" />
+        <input type="text" id="track_number" placeholder="Number" />
+        <input type="text" id="track_bpm" placeholder="BPM" />
         <button id="submit_song">Add Track</button>
         </form>
         <hr />
@@ -52,10 +56,13 @@
       <li class="card" id="<%= _id %>">
 
         <a href="#/edit/<%= _id %>">
-          <div class="card-header"> <p class="label"><%= artist %> - <%= title %> </p> <p class="bpm">   <%= bpm %>  </p><!--dont need genre <p class="genre"> <%= genre %> right now--</p>-->
-          </div>
+        <p class="label"><%= artist %> - <%= title %></p>
+        <p class="number"><%= number %></p>
+        <p class="bpm">   <%= bpm %></p>
+
+        <br>
           <% if(comments !== '') { %>
-          <div class="card-copy"><p><%= comments %></p></div>
+          <p><%= comments %></p></div>
           <% } %>
 
            </a>
@@ -64,15 +71,16 @@
 
     <script type="text/template" id="singleTemp">
       <li class="card" id="<%= _id %>">
-        <form id="updateCoffee">
-            <div class="card-header">
+        <form id="updateTrack">
+
               <input type="text" value="<%= title %>" id="update_title" />
               <input type="text" value="<%= artist %>" id="update_artist" />
               <input type="text" value="<%= genre %>" id="update_genre" />
               <input type="text" value="<%= bpm %>" id="update_bpm" />
-            <div class="card-copy">
+              <input type="text" value="<%= number %>" id="update_number" />
+          <br>
                 <textarea id="update_comments"><%= comments %></textarea>
-            </div>
+
             <button id="updater">Update Track</button>
             <button id="delete">Delete</button>
         </form>

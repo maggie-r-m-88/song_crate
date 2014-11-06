@@ -1,6 +1,6 @@
 (function () {
 
-  App.Models.Coffee = Backbone.Model.extend({
+  App.Models.Track = Backbone.Model.extend({
 
     idAttribute: '_id',
 
@@ -10,12 +10,13 @@
       comments: '',
       artist: '',
       genre: '',
-      bpm: ''
+      bpm: '',
+      number: ''
     },
 
     initialize: function () {
       var t = this.get('name');
-      //console.log(t + " has been added");
+    
     }
 
   });
@@ -24,8 +25,11 @@
 
 (function () {
 
-  App.Collections.Coffees = Backbone.Collection.extend({
-    model: App.Models.Coffee,
+  App.Collections.Tracks = Backbone.Collection.extend({
+    model: App.Models.Track,
+      comparator: function (model) {
+      return parseInt(model.get('number'));
+    },
     url: 'https://tiy-atl-fe-server.herokuapp.com/collections/magsmusicapp'
   });
 
@@ -33,40 +37,45 @@
 
 (function () {
 
-  App.Views.AddCoffee = Backbone.View.extend({
+  App.Views.Home = Backbone.View.extend({
 
     events: {
-      'submit #addCoffee' : 'addCoffee'
+    //  'submit #addTrack' : 'addTrack'
     },
 
     initialize: function () {
       this.render();
-
-      $('#coffeeForm').html(this.$el);
+      //make a new thing here//
+      $('#trackList').html(this.$el);
     },
 
     render: function () {
-      this.$el.html($('#addTemp').html());
-    },
-
-    addCoffee: function (e) {
-      e.preventDefault();
-
-      var c = new App.Models.Coffee({
-
-        title: $('#coffee_title').val(),
-        artist: $('#coffee_artist').val(),
-        genre: $('#coffee_genre').val(),
-        bpm: $('#coffee_bpm').val(),
-        comments: $('coffee_comments').val()
-      });
-
-      App.coffees.add(c).save();
-    $('#addCoffee')[0].reset();
-  
+      //this will be my script on the home page
+      this.$el.html($('#homeView').html());
     }
 
 
+    //i dont think ill need a function for my home page yet.....
+/*    addTrack: function (e) {
+      e.preventDefault();
+
+      var c = new App.Models.Track({
+
+        title: $('#track_title').val(),
+        artist: $('#track_artist').val(),
+        genre: $('#track_genre').val(),
+        bpm: $('#track_bpm').val(),
+        number: $('#track_number').val(),
+        comments: $('#track_comments').val()
+      });
+
+      App.tracks.add(c).save(null, {
+        success: function (){
+          App.router.navigate('list', { trigger: true });
+        }
+      });
+
+    }*/
 
 
   });
@@ -75,10 +84,57 @@
 
 (function () {
 
-  App.Views.ListCoffee = Backbone.View.extend({
+  App.Views.AddTrack = Backbone.View.extend({
+
+    events: {
+      'submit #addTrack' : 'addTrack'
+    },
+
+    initialize: function () {
+      this.render();
+
+      $('#trackList').html(this.$el);
+    },
+
+    render: function () {
+      this.$el.html($('#addTemp').html());
+    },
+
+    addTrack: function (e) {
+      e.preventDefault();
+
+      var c = new App.Models.Track({
+
+        title: $('#track_title').val(),
+        artist: $('#track_artist').val(),
+        genre: $('#track_genre').val(),
+        bpm: $('#track_bpm').val(),
+        number: $('#track_number').val(),
+        comments: $('#track_comments').val()
+      });
+
+      App.tracks.add(c).save(null, {
+        success: function (){
+          App.router.navigate('list', { trigger: true });
+        }
+
+
+      });
+
+
+    }
+
+
+  });
+
+}());
+
+(function () {
+
+  App.Views.ListTrack = Backbone.View.extend({
 
     tagName: 'ul',
-    className: 'allCoffees',
+    className: 'allTracks',
 
     events: {},
 
@@ -91,16 +147,17 @@
       this.collection.on('sync', this.render, this);
 
       // Get our Element On Our Page
-      $('#coffeeList').html(this.$el);
+      $('#trackList').html(this.$el);
 
     },
 
     render: function () {
       var self = this;
 
-      // Empty out 
+      // Empty out
       this.$el.empty();
-
+      //default sort set on collection
+      this.collection.sort();
       this.collection.each(function (c) {
         self.$el.append(self.template(c.toJSON()));
       });
@@ -111,16 +168,18 @@
   });
 
 }());
+
 (function () {
 
-  App.Views.SingleCoffee = Backbone.View.extend({
-
+  App.Views.SingleTrack = Backbone.View.extend({
+    //each track will be an li under this ul
     tagName: 'ul',
-    className: 'coffeeSingle',
+    className: 'trackSingle',
 
     events: {
-      'submit #updateCoffee' : 'updateCoffee',
-      'click #delete' : 'deleteCoffee'
+      'submit #updateTrack' : 'updateTrack',
+      'click #delete' : 'deleteTrack'
+
     },
 
     template: _.template($('#singleTemp').html()),
@@ -129,52 +188,49 @@
       this.options = options;
       this.render();
 
-      $('#coffeeForm').empty();
-
       // Get our Element On Our Page
-      $('#coffeeList').html(this.$el);
+      $('#trackList').html(this.$el);
     },
 
     render: function () {
 
       this.$el.empty();
 
-      this.$el.html(this.template(this.options.coffee.toJSON()));
+      this.$el.html(this.template(this.options.track.toJSON()));
 
     },
 
-    updateCoffee: function (e) {
+    updateTrack: function (e) {
       e.preventDefault();
 
       // Update our Model Instance
-      this.options.coffee.set({
-      //  name: $('#update_name').val(),
-      //  brand: $('#update_brand').val(),
+      this.options.track.set({
 
         title: $('#update_title').val(),
         artist: $('#update_artist').val(),
         genre: $('#update_genre').val(),
         comments: $('#update_comments').val(),
-        bpm: $('#update_bpm').val()
+        bpm: $('#update_bpm').val(),
+        number: $('#update_number').val()
 
       });
 
       // Save Instance
-      this.options.coffee.save();
+      this.options.track.save();
 
       // Go back to our home page
-      App.router.navigate('', {trigger: true});
+      App.router.navigate('list', {trigger: true});
 
     },
 
-    deleteCoffee: function (e) {
+    deleteTrack: function (e) {
       e.preventDefault();
 
       // Remove Coffee
-      this.options.coffee.destroy();
+      this.options.track.destroy();
 
       // Go home ET
-      App.router.navigate('', {trigger: true});
+      App.router.navigate('list', {trigger: true});
 
     }
 
@@ -187,64 +243,57 @@
   App.Routers.AppRouter = Backbone.Router.extend({
 
     initialize: function () {
-      // Light the Fire
+
       Backbone.history.start();
     },
 
     routes: {
       '' : 'home',
-      'edit/:id' : 'editCoffee'
+      'add' : 'addTrack',
+      'list' : 'listTrack',
+      'edit/:id' : 'editTrack'
     },
 
     home: function () {
-      new App.Views.AddCoffee();
-      new App.Views.ListCoffee({ collection: App.coffees });
+      // create home view here i guess//
     },
 
-    editCoffee: function (id) {
+     addTrack: function () {
+      new App.Views.AddTrack();
 
-      var c = App.coffees.get(id);
+    },
 
-      new App.Views.SingleCoffee({ coffee: c });
+     listTrack: function () {
+       new App.Views.ListTrack({ collection: App.tracks });
+     },
+
+    editTrack: function (id) {
+
+      var c = App.tracks.get(id);
+      new App.Views.SingleTrack({ track: c });
     }
 
   });
 
 }());
+
 (function () {
 
   // Create Instance of Collection
-  App.coffees = new App.Collections.Coffees();
+  App.tracks = new App.Collections.Tracks();
 
   // Fetch any server-side coffees
-  App.coffees.fetch().done( function () {
+  App.tracks.fetch().done( function () {
 
     App.router = new App.Routers.AppRouter();
 
   });
-$('#home').on('click', function(event){
-        $('#coffeeForm').hide();
-        $('#coffeeList').hide();
-        $('.main').show();
 
 
-});
+//  $('#home').on('click', function(){
+//   $('.main').show(200);
 
-
- $('#show_list').on('click', function(event){
-            $('#coffeeForm').hide();
-            $('#coffeeList').show();
-            $('.main').hide();
- });
-
- $('#add_song').on('click', function(event){
-            $('#coffeeList').hide();
-            $('#coffeeForm').show();
-            $('.main').hide();
-
- });
-
-
+//  });
 
 
 
