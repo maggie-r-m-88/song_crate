@@ -26,8 +26,8 @@
   <div id="body-container">
 
     <div class="nav-bar">
-         <a href="/#"><button id="home">Home</button></a>
-         <button id="show_list">Show Tracks</button>
+         <a href="/"><button id="home">Home</button></a>
+         <a href="/#list"><button id="show_list">Show Tracks</button></a>
          <a href="/#add"><button id="add_song">Add Track</button></a>
 
     </div>
@@ -43,7 +43,7 @@
           <h2> Will go here </h2>
           <button id="random">Random</button>
         </div>
-      
+
         <div id="coffeeList"></div>
 
     </div><!---end of hero unit-->
@@ -57,6 +57,7 @@
         <input type="text" id="coffee_title" placeholder="Title" />
         <input type="text" id="coffee_artist" placeholder="Artist" />
         <input type="text" id="coffee_genre" placeholder="Genre" />
+        <input type="text" id="coffee_number" placeholder="Number" />
         <input type="text" id="coffee_bpm" placeholder="BPM" />
         <button id="submit_song">Add Track</button>
         </form>
@@ -67,7 +68,7 @@
       <li class="card" id="<%= _id %>">
 
         <a href="#/edit/<%= _id %>">
-          <div class="card-header"> <p class="label"><%= artist %> - <%= title %> </p> <p class="bpm">   <%= bpm %>  </p><!--dont need genre <p class="genre"> <%= genre %> right now--</p>-->
+          <div class="card-header"> <p class="label"><%= artist %> - <%= title %> <%= number %></p> <p class="bpm">   <%= bpm %>  </p><!--dont need genre <p class="genre"> <%= genre %> right now--</p>-->
           </div>
           <% if(comments !== '') { %>
           <div class="card-copy"><p><%= comments %></p></div>
@@ -85,6 +86,7 @@
               <input type="text" value="<%= artist %>" id="update_artist" />
               <input type="text" value="<%= genre %>" id="update_genre" />
               <input type="text" value="<%= bpm %>" id="update_bpm" />
+              <input type="text" value="<%= number %>" id="update_number" />
             <div class="card-copy">
                 <textarea id="update_comments"><%= comments %></textarea>
             </div>

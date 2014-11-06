@@ -25,12 +25,13 @@
         artist: $('#coffee_artist').val(),
         genre: $('#coffee_genre').val(),
         bpm: $('#coffee_bpm').val(),
+        number: $('#coffee_number').val(),
         comments: $('coffee_comments').val()
       });
 
       App.coffees.add(c).save(null, {
         success: function (){
-          App.router.navigate('', { trigger: true });
+          App.router.navigate('list', { trigger: true });
         }
 
 

@@ -10,7 +10,8 @@
       comments: '',
       artist: '',
       genre: '',
-      bpm: ''
+      bpm: '',
+      number: ''
     },
 
     initialize: function () {

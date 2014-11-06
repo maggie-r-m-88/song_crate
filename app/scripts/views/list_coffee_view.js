@@ -23,9 +23,10 @@
     render: function () {
       var self = this;
 
-      // Empty out 
+      // Empty out
       this.$el.empty();
-
+      //default sort set on collection
+      this.collection.sort();
       this.collection.each(function (c) {
         self.$el.append(self.template(c.toJSON()));
       });

@@ -8,6 +8,7 @@
     events: {
       'submit #updateCoffee' : 'updateCoffee',
       'click #delete' : 'deleteCoffee'
+
     },
 
     template: _.template($('#singleTemp').html()),
@@ -35,11 +36,13 @@
 
       // Update our Model Instance
       this.options.coffee.set({
+
         title: $('#update_title').val(),
         artist: $('#update_artist').val(),
         genre: $('#update_genre').val(),
         comments: $('#update_comments').val(),
-        bpm: $('#update_bpm').val()
+        bpm: $('#update_bpm').val(),
+        number: $('#update_number').val()
 
       });
 
@@ -47,7 +50,7 @@
       this.options.coffee.save();
 
       // Go back to our home page
-      App.router.navigate('', {trigger: true});
+      App.router.navigate('list', {trigger: true});
 
     },
 
@@ -58,7 +61,7 @@
       this.options.coffee.destroy();
 
       // Go home ET
-      App.router.navigate('', {trigger: true});
+      App.router.navigate('list', {trigger: true});
 
     }
 

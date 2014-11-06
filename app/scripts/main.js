@@ -11,7 +11,10 @@
   });
 
 
+//  $('#home').on('click', function(){
+//    $('.main').show(200);
 
+//  });
 
 
 

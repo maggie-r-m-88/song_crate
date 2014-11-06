@@ -88,7 +88,6 @@ body {
 }
 #coffeeList{
 
-
   li{
     padding-left: 5px;
     margin-top: 12px;
@@ -124,8 +123,7 @@ margin-top: 7px;
 }
 .card-copy{
   font-size: 14px;
-clear: both;
-
+  clear: both;
   width: 100%;
  p{
    padding-left: 0;
@@ -133,5 +131,5 @@ clear: both;
 }
 
 .main{
-
+ display: none;
 }
