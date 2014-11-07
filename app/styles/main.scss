@@ -51,7 +51,7 @@ body {background-color: $machine;
 
 }
 .header{
-  background-image: url("/images/IMG_2955.jpg");
+  background-image: url("../images/IMG_2955.jpg");
   height: 200px;
   position: relative;
   color: black;
@@ -62,7 +62,7 @@ body {background-color: $machine;
 }
 #body-container{
   //background-color:  $darkgreen;
-  background-image: url('/images/IMG_2955.jpg');
+  background-image: url('../images/IMG_2955.jpg');
   background-size: cover;
   //opacity: .9;
 
@@ -73,7 +73,7 @@ body {background-color: $machine;
     padding-top: 1px;
     padding-left: 40px;
     height: 150px;
-  
+
     color: white;
     background-color: $darkgreen;
     line-height: 1;
