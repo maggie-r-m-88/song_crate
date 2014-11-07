@@ -36,21 +36,31 @@ $hero: hsla(0, 0%, 96%, 1);
 $purp:  hsla(271, 100%, 55%, 1);
 // Custom Styles
 body {
-  background-size: cover;
-  background-image:url("/images/129H.jpg");
-opacity: .9;
+  background-color: $machine;
+  //background-size: cover;
+  //background-image:url("/images/IMG_2955.jpg");
+
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   background-color: yellow;
 }
-
+.header{
+  background-image: url("/images/IMG_2955.jpg");
+  height: 130px;
+  color: black;
+  opacity: .9;
+  background-size: cover;
+}
 #body-container{
   background-color:  $darkgreen;
-  margin-top: 200px;
 
+
+  height: 1000px;
   h1 {
     margin-left: 160px;
-    font-size: 80px;
+    font-size: 100px;
+    opacity: .7;
+    background-color: white;
     line-height: 1;
     letter-spacing: -1px;
   }
@@ -61,14 +71,14 @@ opacity: .9;
   margin: 25px;
 }
 #addTrack {
-  margin: 50px auto 0 auto;
+  margin: 50px auto 50px auto;
   width: 600px;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
   background-color: $machine;
   border-radius: 6px;
-  margin-bottom: 30px;
+
   border: 2px solid $tan;
   padding: 60px;
 
@@ -97,7 +107,7 @@ opacity: .9;
   background-color: $machine;
   border-radius: 6px;
   margin-bottom: 30px;
-  border: 2px solid $tan;
+  //border: 2px solid $tan;
   padding: 60px;
 
   form {

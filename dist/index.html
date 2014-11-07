@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="styles/vendor.css">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato:400,900|Arvo|Oswald|Roboto+Condensed:400,700|Raleway:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Righteous|Francois+One|Nunito' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="styles/main.css">
@@ -27,7 +28,7 @@
     <div class="header">
          <h1>MixList</h1>
     </div>
-
+<div class="main"></div>
 
         <div id="trackList"></div>
 
@@ -44,7 +45,6 @@
 
         <input type="text" id="track_title" placeholder="Title" />
         <input type="text" id="track_artist" placeholder="Artist" />
-        <input type="text" id="track_genre" placeholder="Genre" />
         <input type="text" id="track_number" placeholder="Number" />
         <input type="text" id="track_bpm" placeholder="BPM" />
         <button id="submit_song">Add Track</button>
@@ -57,7 +57,7 @@
 
         <a href="#/edit/<%= _id %>">
         <p class="label"><%= artist %> - <%= title %></p>
-        <p class="number"><%= number %></p>
+        <p class="number">#<%= number %></p>
         <p class="bpm">   <%= bpm %></p>
 
         <br>
@@ -75,7 +75,6 @@
 
               <input type="text" value="<%= title %>" id="update_title" />
               <input type="text" value="<%= artist %>" id="update_artist" />
-              <input type="text" value="<%= genre %>" id="update_genre" />
               <input type="text" value="<%= bpm %>" id="update_bpm" />
               <input type="text" value="<%= number %>" id="update_number" />
           <br>
