@@ -18,15 +18,16 @@
   <body>
   <div id="body-container">
 
-    <div class="nav-bar">
-         <a href="/"><button id="home"><span class="entypo-home"></span>Home</button></a>
-         <a href="/#list"><button id="show_list"><span class="entypo-list"></span>Show Tracks</button></a>
-         <a href="/#add"><button id="add_song"><span class="entypo-plus-circled"></span>Add Track</button></a>
 
-    </div>
 
     <div class="header">
          <h1>MixTape</h1>
+         <div class="nav-bar">
+              <a href="/"><button id="home"><span class="entypo-home"></span>Home</button></a>
+              <a href="/#list"><button id="show_list"><span class="entypo-list"></span>Show Tracks</button></a>
+              <a href="/#add"><button id="add_song"><span class="entypo-plus-circled"></span>Add Track</button></a>
+
+         </div>
     </div>
 
 
@@ -36,8 +37,8 @@
 
   </div> <!---end of container-->
     <script type="text/template" id="homeView">
-      <h1>THIS IS A TEST</h1>
-      <h2>info about my app </h2>
+    <!--//  <h1></h1>
+      <h2>info about my app </h2>-->
     </script>
 
     <script type="text/template" id="addTemp">
@@ -58,7 +59,7 @@
 
         <a href="#/edit/<%= _id %>">
         <p class="label"><%= artist %> - <%= title %></p>
-        <p class="number">#<%= number %></p>
+        <p class="number"><%= number %></p>
         <p class="bpm">   <%= bpm %></p>
 
         <br>
