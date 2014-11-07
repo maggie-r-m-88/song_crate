@@ -46,29 +46,36 @@ body {
   background-color: $machine;
   //background-size: cover;
   //background-image:url("/images/IMG_2955.jpg");
-
+  background-color: hsla(51, 100%, 68%, 1);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-  background-color: yellow;
+
 }
 .header{
   background-image: url("/images/IMG_2955.jpg");
-  height: 130px;
+  height: 150px;
   color: black;
-  opacity: .8;
+  opacity: .9;
   background-size: cover;
 }
 #body-container{
-  background-color:  $darkgreen;
-
+  //background-color:  $darkgreen;
+  background-image: url('/images/IMG_2954.jpg');
+  background-size: cover;
+  opacity: .9;
 
   height: 1000px;
   h1 {
-    margin-left: 160px;
-    font-size: 100px;
-    opacity: .7;
-    background-color: white;
+    margin-left: 320px;
+    font-size: 130px;
+    padding-top: 1px;
+    padding-left: 70px;
+    height: 150px;
+    color: white;
+
+    background-color: $darkgreen;
     line-height: 1;
+    width: 600px;
     letter-spacing: -1px;
   }
 }
@@ -237,7 +244,6 @@ box-shadow: 10px 40px 100px 20px #000000;
     background-color: $machine;
     font-size:18px;
 
-
   }
 
   #update_number{
@@ -254,7 +260,7 @@ box-shadow: 10px 40px 100px 20px #000000;
   }
 }
 .nav-bar{
-  border-bottom: 3px solid $yellow;
+
   margin-left: 160px;
 }
 
@@ -323,7 +329,9 @@ box-shadow: 10px 40px 100px 20px #000000;
   margin-left: -34px;
   color: black;
 }
+#trackList{
 
+}
 //styling for tracklist goes here
 ul.allTracks{
   li{
@@ -365,6 +373,7 @@ background-color: green;
 .main{
   margin-top: 55px;
   margin-left: 150px;
+  color: blue;
 }
 
 
