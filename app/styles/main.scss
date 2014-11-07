@@ -111,7 +111,9 @@ body {
   #track_artist{
     position: absolute;
     margin-top: -40px;
-
+    background-color: black;
+    color: white;
+    font-family: $number;
     width: 400px;
     margin-left: 100px;
   }
@@ -120,6 +122,8 @@ body {
     height: 90px;
     margin-left: -40px;
     width: 110px;
+    border: 1px solid $outline;
+
     padding: 0;
     position: absolute;
     text-align: center;
@@ -133,10 +137,34 @@ body {
     margin-top: 80px;
     text-align: center;
     width: 110px;
+    border: 1px solid $outline;
     margin-left: 390px;
     font-size: 35px;
     background-color: $gold;
     font-family: $number;
+  }
+  #addnote{
+    background-color: $red;
+    border-radius:300px;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    border: 1px solid $outline;
+    margin-top: 90px;
+    color: $tanlight;
+    margin-left: 100px;
+    font-size: 23px;
+    font-weight: bold;
+    &:hover{
+      background-color: hsla(1, 100%, 40%, 1);
+      color: white;
+    }
+   .fontawesome-comment{
+    margin-left: -10px;
+    position: absolute;
+    margin-top: -15px;
+   }
+
   }
 }
 
@@ -254,8 +282,13 @@ box-shadow: 10px 40px 100px 20px #000000;
 }
 
 #submit_song{
-  margin-top: 100px;
+  margin-top: 90px;
   margin-left: 170px;
+  &:hover{
+    background-color: hsla(51, 100%, 48%, 1);
+    color: white;
+
+  }
 }
 #updater{
   position: absolute;
