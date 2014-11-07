@@ -2,20 +2,26 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
-//$number: 'Droid Sans', sans-serif;
-//$number: 'Lato', sans-serif;
+@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
+ //'Droid Sans', sans-serif;
+$freak:'Lato', sans-serif;
 $number: 'Arvo', serif;
 //$number:  'Oswald', sans-serif;
 $title: 'Raleway', sans-serif;
 // 'Roboto Condensed', sans-serif;
 //'Montserrat', sans-serif;
 //font library
-//$logo: 'Fjalla One', sans-serif;
-//$logo: 'Righteous', cursive;
-//$logo:'Francois One', sans-serif;
-//$logo: 'Nunito', sans-serif;
-
-
+//'Fjalla One', sans-serif;
+// 'Righteous', cursive;
+$cool:'Francois One', sans-serif;
+//'Nunito', sans-serif;
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
 
 
 //colors pallette
@@ -104,6 +110,7 @@ body {
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
+
   background-color: $machine;
   border-radius: 6px;
   margin-bottom: 30px;
@@ -124,26 +131,27 @@ body {
     //opacity: .9;
     position: absolute;
     border: 1px solid $outline;
-    color: white;
+    color: black;
+    text-align: center;
     font-weight: bold;
-    margin-top: 140px;
-    width: 66px;
+    margin-top: 150px;
+    width: 75px;
     font-family: $number;
     padding: 0;
     border-radius:6px;
-    font-size: 40px;
-    margin-left: 400px;
-    background-color: black;
+    font-size: 38px;
+    margin-left: 480px;
+    background-color: white;
   }
   #update_title{
     position: absolute;
     margin-left: -60px;
     padding-top: 0;
-    background-color: $machine;
+    background-color: black;
     font-size:45px;
-    font-family:   $title;
+   font-family: $cool;
     width: 656px;
-    height: 100px;
+    height: 70px;
     margin-top: -75px;
     color: white;
   }
@@ -151,14 +159,14 @@ body {
     border-radius:6px;
     position: absolute;
     margin-left: -48px;
-    padding-top: 0;
+    padding-top: 2;
     color: white;
     width: 643px;
     font-size: 26px;
     margin-top: -5px;
     background-color: $machine;
-    font-size:27px;
-    font-family:   $title;
+    font-size:18px;
+
 
   }
 
@@ -172,6 +180,7 @@ body {
     border: 2px solid $outline;
     margin-top: 140px;
     font-size: 23px;
+    font-weight: bold;
   }
 }
 .nav-bar{
@@ -195,7 +204,7 @@ body {
 #updater{
   position: absolute;
   margin-top: 113px;
-  margin-left: 150px;
+  margin-left: 170px;
   border: 1px solid $outline;
 }
 #delete {
@@ -256,4 +265,10 @@ background-color: green;
 .main{
   margin-top: 55px;
   margin-left: 150px;
+}
+
+
+//purely dezine
+.fontawesome-trash, .entypo-floppy{
+  padding-right: 5px;
 }
