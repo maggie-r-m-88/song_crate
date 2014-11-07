@@ -19,16 +19,16 @@
   <div id="body-container">
 
     <div class="nav-bar">
-         <a href="/"><button id="home">Home</button></a>
-         <a href="/#list"><button id="show_list">Show Tracks</button></a>
-         <a href="/#add"><button id="add_song">Add Track</button></a>
+         <a href="/"><button id="home"><span class="entypo-home"></span>Home</button></a>
+         <a href="/#list"><button id="show_list"><span class="entypo-list"></span>Show Tracks</button></a>
+         <a href="/#add"><button id="add_song"><span class="entypo-plus-circled"></span>Add Track</button></a>
 
     </div>
 
     <div class="header">
-         <h1>RoyaList</h1>
+         <h1>MixTape</h1>
     </div>
-<div class="main"></div>
+
 
         <div id="trackList"></div>
 
@@ -45,9 +45,10 @@
 
         <input type="text" id="track_title" placeholder="Title" />
         <input type="text" id="track_artist" placeholder="Artist" />
-        <input type="text" id="track_number" placeholder="Number" />
-        <input type="text" id="track_bpm" placeholder="BPM" />
-        <button id="submit_song">Add Track</button>
+        <input type="text" id="track_number" placeholder="#" />
+        <input type="text" id="track_bpm" placeholder="bpm" />
+        <button id="addnote"><span class="fontawesome-comment"></span></button>
+        <button id="submit_song"><span class="entypo-plus-circled"></span>Add Track</button>
         </form>
         <hr />
     </script>
@@ -80,8 +81,8 @@
           <br>
                 <textarea id="update_comments"><%= comments %></textarea>
 
-            <button id="updater">Update Track</button>
-            <button id="delete">Delete</button>
+            <button id="updater"><span class="entypo-floppy"></span>Update Track</button>
+            <button id="delete"><span class="fontawesome-trash"></span>Delete</button>
         </form>
       </li>
     </script>

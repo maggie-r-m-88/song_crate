@@ -42,8 +42,7 @@ $teal: hsla(167, 100%, 55%, 1);
 $hero: hsla(0, 0%, 96%, 1);
 $purp:  hsla(271, 100%, 55%, 1);
 // Custom Styles
-body {
-  background-color: $machine;
+body {background-color: $machine;
   //background-size: cover;
   //background-image:url("/images/IMG_2955.jpg");
   background-color: hsla(51, 100%, 68%, 1);
@@ -53,26 +52,29 @@ body {
 }
 .header{
   background-image: url("/images/IMG_2955.jpg");
-  height: 150px;
+  height: 200px;
+  position: relative;
   color: black;
   opacity: .9;
+
+  margin-bottom: 10px;
   background-size: cover;
 }
 #body-container{
   //background-color:  $darkgreen;
-  background-image: url('/images/IMG_2954.jpg');
+  background-image: url('/images/IMG_2955.jpg');
   background-size: cover;
-  opacity: .9;
+  //opacity: .9;
 
   height: 1000px;
   h1 {
     margin-left: 320px;
     font-size: 130px;
     padding-top: 1px;
-    padding-left: 70px;
+    padding-left: 40px;
     height: 150px;
+  
     color: white;
-
     background-color: $darkgreen;
     line-height: 1;
     width: 600px;
@@ -260,8 +262,10 @@ box-shadow: 10px 40px 100px 20px #000000;
   }
 }
 .nav-bar{
-
-  margin-left: 160px;
+  background-color: black;
+  width: 600px;
+  margin-top: -20px;
+  margin-left: 320px;
 }
 
 //top console buttons
@@ -334,29 +338,41 @@ box-shadow: 10px 40px 100px 20px #000000;
 }
 //styling for tracklist goes here
 ul.allTracks{
+
   li{
-    border: 2px solid black;
-    width: 700px;
-    background-color: yellow;
+    position: relative;
+    width: 600px;
+    border: 2px solid $machine;
+    border-radius: 20px;
+
+    height: 65px;
+    margin-left: 320px;
+    margin-top: 2px;
+    background-color: black;
   }
   a{
     color: black;
   }
 }
 .label{
+  position: absolute;
   font-weight: bold;
-  float: left;
-  margin-left: 60px;
+  margin-left: 70px;
   font-size: 22px;
-  margin-top: 18px;
-  background-color: white;
+  height: 60px;
+  background-color: black;
+  color: white;
+  font-family: $number;
 }
 .bpm{
-margin-left: 140px;
-font-size: 24px;
-margin-top: 7px;
+position: absolute;
+margin-left: 530px;
+font-size: 22px;
+margin-top: 35px;
+display: none;
+color: $gold;
+font-family: $number;
 width: 90px;
-background-color: green;
  padding-left: 20px;
 }
 .genre{
@@ -364,10 +380,18 @@ background-color: green;
   font-size: 14px;
 }
 .number{
+  position: absolute;
   color: white;
-  width: 100px;
-  font-size: 32px;
-  background-color: gray;
+  background-color: $red;
+  width: 40px;
+  height: 40px;
+  border: 1px solid $outline;
+  border-radius: 100px;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 28px;
+  font-family: $number;
 }
 
 .main{
