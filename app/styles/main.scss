@@ -55,7 +55,7 @@ body {
   background-image: url("/images/IMG_2955.jpg");
   height: 130px;
   color: black;
-  opacity: .9;
+  opacity: .8;
   background-size: cover;
 }
 #body-container{
@@ -82,12 +82,13 @@ body {
   -webkit-box-shadow: 10px 40px 100px 20px #000000;
   box-shadow: 10px 40px 100px 20px #000000;
   width: 600px;
+  height: 250px;
   font-size: 18px;
+  position: relative;
   font-weight: 200;
   line-height: 30px;
   background-color: $machine;
   border-radius: 6px;
-
   border: 2px solid $tan;
   padding: 60px;
 
@@ -100,6 +101,42 @@ body {
     color: black;
     font-family: helvetica;
     font-size: 18px;
+  }
+  #track_title{
+    position: absolute;
+    margin-top: 20px;
+    width: 400px;
+    margin-left: 100px;
+  }
+  #track_artist{
+    position: absolute;
+    margin-top: -40px;
+
+    width: 400px;
+    margin-left: 100px;
+  }
+  #track_number{
+    margin-top: -40px;
+    height: 90px;
+    margin-left: -40px;
+    width: 110px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    background-color:  $orange;
+    color: white;
+    font-family: $number;
+    font-size: 58px;
+  }
+  #track_bpm{
+    position: absolute;
+    margin-top: 80px;
+    text-align: center;
+    width: 110px;
+    margin-left: 390px;
+    font-size: 35px;
+    background-color: $gold;
+    font-family: $number;
   }
 }
 
@@ -152,7 +189,6 @@ box-shadow: 10px 40px 100px 20px #000000;
     position: absolute;
     margin-left: -60px;
     padding-top: 0;
-
     background-color: black;
     font-size:45px;
     font-family: $number;
@@ -215,6 +251,11 @@ box-shadow: 10px 40px 100px 20px #000000;
   margin-top: 300px;
   background-color: $yellow;
   color: black;
+}
+
+#submit_song{
+  margin-top: 100px;
+  margin-left: 170px;
 }
 #updater{
   position: absolute;
