@@ -110,28 +110,40 @@ body {
     border: none;
     color: white;
     font-weight: bold;
-    margin-top: -180px;
-    width: 155px;
+    margin-top: 30px;
+    width: 180px;
     font-family: $number;
     padding: 0;
     border-radius:6px;
-    font-size: 78px;
-    margin-left: 380px;
-      background-color: $machine;
-
+    font-size: 100px;
+    margin-left: 550px;
+    background-color: $machine;
   }
   #update_title{
     position: absolute;
     margin-left: -60px;
     padding-top: 0;
     background-color: $machine;
-    font-size: 27px;
+    font-size:45px;
+    font-family:   $title;
     width: 790px;
     height: 100px;
     margin-top: -75px;
-
-    font-family: $title;
     color: white;
+  }
+  #update_artist{
+    border-radius:6px;
+    position: absolute;
+    margin-left: -48px;
+    padding-top: 0;
+    color: white;
+    width:780px;
+    font-size: 26px;
+    margin-top: -5px;
+    background-color: $machine;
+    font-size:27px;
+    font-family:   $title;
+
   }
 }
 .nav-bar{
