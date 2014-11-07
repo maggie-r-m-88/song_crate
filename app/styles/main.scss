@@ -27,6 +27,7 @@ $cool:'Francois One', sans-serif;
 //colors pallette
 $darkgreen:   hsl(160,7,23);
 $machine: hsl(279,1,34);
+$gold: hsla(47, 100%, 50%, 1);
 $tan: hsl(31,28,68);
 $tanlight: hsl(60,100,94);
 $red: hsl(355,93,52);
@@ -141,7 +142,7 @@ body {
     border-radius:6px;
     font-size: 38px;
     margin-left: 480px;
-    background-color: white;
+    background-color: $gold;
   }
   #update_title{
     position: absolute;
@@ -149,7 +150,7 @@ body {
     padding-top: 0;
     background-color: black;
     font-size:45px;
-   font-family: $cool;
+    font-family: $number;
     width: 656px;
     height: 70px;
     margin-top: -75px;
