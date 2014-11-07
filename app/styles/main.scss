@@ -36,13 +36,18 @@ $hero: hsla(0, 0%, 96%, 1);
 $purp:  hsla(271, 100%, 55%, 1);
 // Custom Styles
 body {
-  //background: #fafafa;
-  background-color: $darkgreen;
+  background-size: cover;
+  background-image:url("/images/129H.jpg");
+opacity: .9;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
+  background-color: yellow;
 }
 
 #body-container{
+  background-color:  $darkgreen;
+  margin-top: 200px;
+
   h1 {
     margin-left: 160px;
     font-size: 80px;
@@ -108,7 +113,7 @@ body {
   #update_bpm{
     //opacity: .9;
     position: absolute;
-    border: none;
+    border: 1px solid $outline;
     color: white;
     font-weight: bold;
     margin-top: 140px;
