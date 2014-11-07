@@ -15,7 +15,7 @@
     },
 
     home: function () {
-      // create home view here i guess//
+      new App.Views.Home();
     },
 
      addTrack: function () {
