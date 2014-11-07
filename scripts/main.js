@@ -9,14 +9,13 @@
       title: '',
       comments: '',
       artist: '',
-      genre: '',
       bpm: '',
       number: ''
     },
 
     initialize: function () {
       var t = this.get('name');
-    
+
     }
 
   });
@@ -107,7 +106,6 @@
 
         title: $('#track_title').val(),
         artist: $('#track_artist').val(),
-        genre: $('#track_genre').val(),
         bpm: $('#track_bpm').val(),
         number: $('#track_number').val(),
         comments: $('#track_comments').val()
@@ -208,7 +206,6 @@
 
         title: $('#update_title').val(),
         artist: $('#update_artist').val(),
-        genre: $('#update_genre').val(),
         comments: $('#update_comments').val(),
         bpm: $('#update_bpm').val(),
         number: $('#update_number').val()
@@ -255,7 +252,7 @@
     },
 
     home: function () {
-      // create home view here i guess//
+      new App.Views.Home();
     },
 
      addTrack: function () {
