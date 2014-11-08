@@ -53,12 +53,16 @@ body {background-color: $machine;
 .header{
   background-image: url("../images/IMG_2955.jpg");
   height: 200px;
+
   position: relative;
   color: black;
   opacity: .9;
-
+  transition: opacity 1.2s ease;
   margin-bottom: 10px;
   background-size: cover;
+  &:hover{
+    opacity: 1;
+  }
 }
 #body-container{
   //background-color:  $darkgreen;
@@ -80,103 +84,61 @@ body {background-color: $machine;
     width: 600px;
     letter-spacing: -1px;
   }
+
 }
-#random{
-  background-color: $gray;
-  color: black;
-  margin: 25px;
-}
-#addTrack {
-  margin: 50px auto 50px auto;
+
+
+
+#addTrack{
+  background-color: black;
   -webkit-box-shadow: 10px 40px 100px 20px #000000;
   box-shadow: 10px 40px 100px 20px #000000;
   width: 600px;
-  height: 250px;
-  font-size: 18px;
+  margin-top: 100px;
+  margin-left: 310px;
+  border-radius: 20px;
+  height: 200px;
   position: relative;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: $machine;
-  border-radius: 6px;
-  border: 2px solid $tan;
-  padding: 60px;
-
-  form {
-    margin: 15px 0;
-  }
-  input{
-    border: none;
-    background-color: $tanlight;
-    color: black;
-    font-family: helvetica;
-    font-size: 18px;
-  }
-  #track_title{
+  .add-artist, .add-title, .add-bpm{
+    font-family: $number;
     position: absolute;
+    font-size: 25px;
+    margin-left: 50px;
+    font-weight: bold;
+
+  }
+  .add-artist{
     margin-top: 20px;
-    width: 400px;
-    margin-left: 100px;
-  }
-  #track_artist{
-    position: absolute;
-    margin-top: -40px;
-    background-color: black;
-    color: white;
-    font-family: $number;
-    width: 400px;
-    margin-left: 100px;
-  }
-  #track_number{
-    margin-top: -40px;
-    height: 90px;
-    margin-left: -40px;
-    width: 110px;
-    border: 1px solid $outline;
 
-    padding: 0;
-    position: absolute;
-    text-align: center;
-    background-color:  $orange;
-    color: white;
-    font-family: $number;
-    font-size: 58px;
   }
-  #track_bpm{
+
+  #track_artist, #track_title, #track_bpm{
     position: absolute;
-    margin-top: 80px;
-    text-align: center;
-    width: 110px;
-    border: 1px solid $outline;
-    margin-left: 390px;
-    font-size: 35px;
+    width: 400px;
+    opacity: .8;
+    margin-left: 140px;
+    color: black;
     background-color: $gold;
     font-family: $number;
+    border: none;
+    border-radius: none;
+    margin-top: 25px;
   }
-  #addnote{
-    background-color: $red;
-    border-radius:300px;
-    width: 45px;
-    height: 45px;
-    position: absolute;
-    border: 1px solid $outline;
-    margin-top: 90px;
-    color: $tanlight;
-    margin-left: 100px;
-    font-size: 23px;
-    font-weight: bold;
-    &:hover{
-      background-color: hsla(1, 100%, 40%, 1);
-      color: white;
-    }
-   .fontawesome-comment{
-    margin-left: -10px;
-    position: absolute;
-    margin-top: -15px;
-   }
+  #track_title{
+    margin-top: 75px;
 
   }
+  #track_bpm{
+    margin-top: 126px;
+    width: 120px;
+  }
+  .add-title{
+    margin-top:70px;
 }
-
+.add-bpm{
+  margin-top: 120px;
+}
+}
 
 ///update will go here
 .trackSingle {
@@ -292,8 +254,9 @@ box-shadow: 10px 40px 100px 20px #000000;
 }
 
 #submit_song{
-  margin-top: 90px;
-  margin-left: 170px;
+  margin-top: 125px;
+  width: 260px;
+  margin-left: 280px;
   &:hover{
     background-color: hsla(51, 100%, 48%, 1);
     color: white;

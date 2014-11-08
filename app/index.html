@@ -50,16 +50,25 @@
     </script>
 
     <script type="text/template" id="addTemp">
+
+    <form id="addTrack">
+
+
         <form id="addTrack">
 
-        <input type="text" id="track_title" placeholder="Title" />
-        <input type="text" id="track_artist" placeholder="Artist" />
-        <input type="text" id="track_number" placeholder="#" />
-        <input type="text" id="track_bpm" placeholder="bpm" />
-        <button id="addnote"><span class="fontawesome-comment"></span></button>
+        <p class="add-artist">Artist:</p><input type="text" id="track_artist" placeholder="Artist" />
+        <p class="add-title">Title:</p>  <input type="text" id="track_title" placeholder="Title" />
+        <p class="add-bpm">BPM:</p>     <input type="text" id="track_bpm" placeholder="bpm" />
         <button id="submit_song"><span class="entypo-plus-circled"></span>Add Track</button>
+    <!--
+
+
+    <input type="text" id="track_number" placeholder="#" />
+
+        <button id="addnote"><span class="fontawesome-comment"></span></button>
+    -->
         </form>
-        <hr />
+      
     </script>
 
     <script type="text/template" id="listTemp">
