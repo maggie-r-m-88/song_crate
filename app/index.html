@@ -29,7 +29,7 @@
 
 
     <div class="header">
-         <h1>MixTape</h1>
+         <h1>MixTape Hero</h1>
          <div class="nav-bar">
               <a href="#/"><button id="home"><span class="entypo-home"></span>Home</button></a>
               <a href="#/list"><button id="show_list"><span class="entypo-list"></span>Show Tracks</button></a>
@@ -55,7 +55,9 @@
 
 
         <form id="addTrack">
-
+        <div class="tracker"><p class="add-number">Track</p>
+        <input type="text" id="track_number" placeholder="#" />
+        </div>
         <p class="add-artist">Artist:</p><input type="text" id="track_artist" placeholder="Artist" />
         <p class="add-title">Title:</p>  <input type="text" id="track_title" placeholder="Title" />
         <p class="add-bpm">BPM:</p>     <input type="text" id="track_bpm" placeholder="bpm" />
@@ -63,12 +65,12 @@
     <!--
 
 
-    <input type="text" id="track_number" placeholder="#" />
+
 
         <button id="addnote"><span class="fontawesome-comment"></span></button>
     -->
         </form>
-      
+
     </script>
 
     <script type="text/template" id="listTemp">
