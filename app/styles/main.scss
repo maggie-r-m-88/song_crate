@@ -74,7 +74,7 @@ body {background-color: $machine;
     margin-left: 320px;
     font-size: 100px;
     padding-top: 10px;
-    padding-left: 40px;
+    padding-left: 30px;
     height: 150px;
     color: white;
     background-color: $darkgreen;
@@ -92,12 +92,17 @@ body {background-color: $machine;
   -webkit-box-shadow: 10px 40px 100px 20px #000000;
   box-shadow: 10px 40px 100px 20px #000000;
   width: 600px;
-  margin-top: 100px;
-  margin-left: 310px;
+  margin-top: 80px;
+  opacity: .9;
+  margin-left: 360px;
   border: 1px solid $machine;
   border-radius: 20px;
   height: 200px;
+  transition: opacity 0.8s ease;
   position: relative;
+  &:hover{
+  opacity: 1;
+  }
   .add-artist, .add-title, .add-bpm, .add-number{
     font-family: $number;
     position: absolute;
@@ -114,7 +119,7 @@ body {background-color: $machine;
     border: 1px solid $outline;
     border-radius: 200px;
     margin-top: -50px;
-    background-color: $buttons;
+    background-color: $red;
     height: 40px;
   }
   .add-number{
@@ -144,11 +149,13 @@ body {background-color: $machine;
   }
   #track_number{
     width: 33px;
+    opacity: 1;
+    color: white;
     text-align: center;
-    margin-left: 110px;
+    margin-left: 100px;
     margin-top: 5px;
     border-radius: 200px;
-    background-color: $yellow;
+    background-color: $red;
     height: 27px;
   }
   #track_bpm{
@@ -176,13 +183,16 @@ box-shadow: 10px 40px 100px 20px #000000;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
-
+  opacity: .9;
   background-color: $machine;
   border-radius: 6px;
   margin-bottom: 30px;
+  transition: opacity 0.8s ease;
   //border: 2px solid $tan;
   padding: 60px;
-
+&:hover{
+  opacity: 1;
+}
   form {
     margin: 15px 0;
   }
@@ -333,11 +343,17 @@ ul.allTracks{
     width: 600px;
     border: 2px solid $machine;
     border-radius: 20px;
-
+-webkit-box-shadow: 5px 20px 100px 10px #000000;
+box-shadow: 5px 20px 100px 10px #000000;
     height: 65px;
-    margin-left: 320px;
+    margin-left: 360px;
     margin-top: 2px;
     background-color: black;
+    transition: width 0.8s ease;
+  }
+  li:hover{
+    width: 530px;
+
   }
   a{
     color: black;
@@ -380,13 +396,25 @@ width: 90px;
   margin-left: 10px;
   margin-top: 10px;
   font-size: 28px;
+  transition: background-color 0.4s ease;
   font-family: $number;
+  &:hover{
+    background-color: $buttons;
+    color: $gold;
+  }
 }
 
 .main{
-  margin-top: 55px;
-  margin-left: 150px;
-  color: blue;
+  margin-top: 25px;
+  margin-left: 320px;
+  width: 700px;
+  height: 300px;
+  opacity: .9;
+  background-color: $darkgreen;
+  h2{
+    font-size: 50px;
+    padding-left: 30px;
+  }
 }
 
 
