@@ -211,6 +211,23 @@ box-shadow: 10px 40px 100px 20px #000000;
     font-family: helvetica;
     font-size: 18px;
   }
+  a{
+    position: absolute;
+    background-color: $darkgreen;
+    margin-left: 200px;
+    padding-left: 10px;
+    color: white;//hsl(0,0,86);
+    width: 40px;
+    padding-top: 6px;
+    height: 40px;
+    margin-left: 360px;
+    margin-top: 147px;
+    transition: background-color 0.5s ease;
+  }
+  a:hover{
+    background-color: hsla(160, 70%, 29%, 1);
+    color: $outline;
+  }
   #update_bpm{
     //opacity: .9;
     position: absolute;
@@ -318,7 +335,7 @@ box-shadow: 10px 40px 100px 20px #000000;
   }
 }
 
-#delete {
+#delete{
   background-color:hsla(2, 100%, 55%, 1);
   position: absolute;
   margin-top: 113px;
@@ -329,6 +346,11 @@ box-shadow: 10px 40px 100px 20px #000000;
   &:hover{
     background-color: hsla(1, 100%, 40%, 1);
     color: white;
+  }
+  #link{
+    margin-left: 180px;
+    position: absolute;
+    background-color: yellow;
   }
 }
 #update_comments{
@@ -427,6 +449,6 @@ width: 90px;
 
 
 //purely dezine
-.fontawesome-trash, .entypo-floppy, .entypo-plus-circled, .entypo-list, .entypo-home{
+.fontawesome-trash, .fontawesome-music,.entypo-floppy, .entypo-plus-circled, .entypo-list, .entypo-home, .entypo-play{
   padding-right: 5px;
 }
