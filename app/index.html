@@ -33,6 +33,7 @@
          <div class="nav-bar">
               <a href="#/"><button id="home"><span class="entypo-home"></span>Home</button></a>
               <a href="#/list"><button id="show_list"><span class="entypo-list"></span>Show Tracks</button></a>
+              <a href="#/addtaper"><button id="tapeview">Saved Tapes</button>
               <a href="#/add"><button id="add_song"><span class="entypo-plus-circled"></span>Add Track</button></a>
 
          </div>
@@ -62,6 +63,7 @@
         <p class="add-artist">Artist:</p><input type="text" id="track_artist" placeholder="Artist" />
         <p class="add-title">Title:</p>  <input type="text" id="track_title" placeholder="Title" />
         <p class="add-bpm">BPM:</p>     <input type="text" id="track_bpm" placeholder="bpm" />
+        <p class="add-url">Url:</p>     <input type="text" id="track_url" placeholder="url" />
         <button id="submit_song"><span class="entypo-plus-circled"></span>Add Track</button>
     <!--
 
@@ -110,6 +112,7 @@
 
 
 
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -128,12 +131,16 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/models/trackmodel.js"></script>
+
     <script src="scripts/collections/trackscollection.js"></script>
+
+
     <script src="scripts/views/home_view.js"></script>
     <script src="scripts/views/add_track_view.js"></script>
     <script src="scripts/views/list_tracks_view.js"></script>
     <script src="scripts/views/update_track_view.js"></script>
     <script src="scripts/routes/app_router.js"></script>
+
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>

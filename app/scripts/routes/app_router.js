@@ -12,6 +12,7 @@
       'add' : 'addTrack',
       'list' : 'listTrack',
       'edit/:id' : 'editTrack'
+
     },
 
     home: function () {

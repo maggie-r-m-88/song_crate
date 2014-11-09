@@ -25,6 +25,7 @@
         artist: $('#track_artist').val(),
         bpm: $('#track_bpm').val(),
         number: $('#track_number').val(),
+        url:$('#track_url').val(),
         comments: $('#track_comments').val()
       });
 
