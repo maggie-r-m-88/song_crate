@@ -11,12 +11,16 @@
       '' : 'home',
       'add' : 'addTrack',
       'list' : 'listTrack',
-      'edit/:id' : 'editTrack'
-
+      'edit/:id' : 'editTrack',
+      'alltapes' : 'allTapes'
     },
 
     home: function () {
       new App.Views.Home();
+    },
+
+    allTapes: function () {
+      new App.Views.AllTapes();
     },
 
      addTrack: function () {

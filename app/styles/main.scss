@@ -292,7 +292,7 @@ box-shadow: 10px 40px 100px 20px #000000;
 }
 
 //top console buttons
-#show_list, #add_song, #home{
+#show_list, #add_song, #home, #tapeview{
   margin: 16px;
   background-color: $buttons;
   color: black;
@@ -448,7 +448,7 @@ width: 90px;
   .current{
     font-size: 30px;
     margin-top: 20px;
-    color: $outline;
+    color: hsl(60,100,93); //$tan;//$outline;
     font-family: $number;
     padding-left: 30px;
   }
@@ -456,7 +456,7 @@ width: 90px;
     font-size: 50px;
     padding-left: 30px;
   }
-  #tape1{
+  .tape1{
     width: 140px;
     height: 140px;
   //  background-color: $gray;
@@ -466,6 +466,7 @@ width: 90px;
     &:hover{
       background-color: $orange;
     }
+
     img{
       width: 140px;
       opacity: .9;
@@ -474,11 +475,11 @@ width: 90px;
       height: 140px;
     }
   }
-  #tape1info{
+  .tape1info{
     height: 140px;
     position: absolute;
     width: 400px;
-    margin-left: 190px;
+    margin-left: 170px;
     margin-top: 20px;
     background-color: $gold;
     transition: background-color 0.8s ease;
@@ -496,7 +497,6 @@ width: 90px;
     }
   }
 }
-
 
 //purely dezine
 .fontawesome-trash,.fontawesome-fastforward, .fontawesome-music,.entypo-floppy, .entypo-plus-circled, .entypo-list, .entypo-home, .entypo-play{

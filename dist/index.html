@@ -25,7 +25,7 @@
          <div class="nav-bar">
               <a href="#/"><button id="home"><span class="entypo-home"></span>Home</button></a>
               <a href="#/list"><button id="show_list"><span class="entypo-list"></span>Show Tracks</button></a>
-              <a href="#/addtaper"><button id="tapeview">Saved Tapes</button>
+              <a href="#/alltapes"><button id="tapeview">Saved Tapes</button>
               <a href="#/add"><button id="add_song"><span class="entypo-plus-circled"></span>Add Track</button></a>
 
          </div>
@@ -40,7 +40,39 @@
     <script type="text/template" id="homeView">
     <div class="main">
     <h2>Saving the World.<br> One Mixtape at at time.</h2>
+    <h3 class="current">Current MixTape</h3>
+    <div class="tape1">
+    <a href="#/list">
+    <img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/969497_693856673974088_1654802293_n.jpg?oh=902f34cb88ea8a5ac23a95043a560ad4&oe=54E28D75&__gda__=1423275782_7356153abf5e53d45679ec2ffc382a93" /img></a>
     </div>
+    <div class="tape1info"><a href="#/list">
+    <h3>Mezclada for Paola</h3>
+    <p>9 Tracks</p>
+
+    </div>
+    </div></a>
+    </script>
+
+    <script type="text/template" id="tapesView">
+    <div class="main">
+    <br>
+
+    <h3 class="current">Saved Mixtapes</h3>
+    <div class="tape-default">
+        <div class="tape1">
+        <a href="#/list">
+        <img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/969497_693856673974088_1654802293_n.jpg?oh=902f34cb88ea8a5ac23a95043a560ad4&oe=54E28D75&__gda__=1423275782_7356153abf5e53d45679ec2ffc382a93" /img></a>
+        </div>
+        <div class="tape1info"><a href="#/list">
+        <h3>Mezcalda for Paola</h3>
+         <p>9 Tracks</p>
+         </a>
+        </div>
+    </div>
+
+
+
+
     </script>
 
     <script type="text/template" id="addTemp">
@@ -57,13 +89,6 @@
         <p class="add-bpm">BPM:</p>     <input type="text" id="track_bpm" placeholder="bpm" />
         <p class="add-url">Url:</p>     <input type="text" id="track_url" placeholder="url" />
         <button id="submit_song"><span class="entypo-plus-circled"></span>Add Track</button>
-    <!--
-
-
-
-
-        <button id="addnote"><span class="fontawesome-comment"></span></button>
-    -->
         </form>
 
     </script>
