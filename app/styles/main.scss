@@ -439,11 +439,18 @@ width: 90px;
   margin-left: 320px;
   width: 700px;
   position: relative;
-  height: 340px;
+  height: 360px;
   opacity: .9;
   background-color: $darkgreen;
   .main:hover{
     opacity: 1;
+  }
+  .current{
+    font-size: 30px;
+    margin-top: 20px;
+    color: $outline;
+    font-family: $number;
+    padding-left: 30px;
   }
   h2{
     font-size: 50px;
@@ -452,15 +459,19 @@ width: 90px;
   #tape1{
     width: 140px;
     height: 140px;
-    background-color: $gray;
+  //  background-color: $gray;
     position: absolute;
     margin-left: 30px;
-    margin-top: 50px;
+    margin-top: 20px;
+    &:hover{
+      background-color: $orange;
+    }
     img{
-      width: 139px;
-      padding-left: 1px;
-      padding-top: 1px;
-      height: 139px;
+      width: 140px;
+      opacity: .9;
+      //padding-left: 1px;
+      //padding-top: 1px;
+      height: 140px;
     }
   }
   #tape1info{
@@ -468,14 +479,18 @@ width: 90px;
     position: absolute;
     width: 400px;
     margin-left: 190px;
-    margin-top: 50px;
+    margin-top: 20px;
     background-color: $gold;
+    transition: background-color 0.8s ease;
+    &:hover{
+      background-color: $yellow;
+    }
     h3,p{
       font-family: $number;
     padding-top: 2px;
     padding-left: 10px;
     }
-    p{
+    p,a{
       color: black;
       font-family: $number;
     }
