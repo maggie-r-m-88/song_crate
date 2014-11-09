@@ -21,10 +21,11 @@
 
 
     <div class="header">
-         <h1>MixTape</h1>
+         <h1>MixTape Hero</h1>
          <div class="nav-bar">
               <a href="#/"><button id="home"><span class="entypo-home"></span>Home</button></a>
               <a href="#/list"><button id="show_list"><span class="entypo-list"></span>Show Tracks</button></a>
+              <a href="#/addtaper"><button id="tapeview">Saved Tapes</button>
               <a href="#/add"><button id="add_song"><span class="entypo-plus-circled"></span>Add Track</button></a>
 
          </div>
@@ -37,21 +38,34 @@
 
   </div> <!---end of container-->
     <script type="text/template" id="homeView">
-    <h2> Finished Tracks</h2>
-
+    <div class="main">
+    <h2>Saving the World.<br> One Mixtape at at time.</h2>
+    </div>
     </script>
 
     <script type="text/template" id="addTemp">
-        <form id="addTrack">
 
-        <input type="text" id="track_title" placeholder="Title" />
-        <input type="text" id="track_artist" placeholder="Artist" />
+    <form id="addTrack">
+
+
+        <form id="addTrack">
+        <div class="tracker"><p class="add-number">Track</p>
         <input type="text" id="track_number" placeholder="#" />
-        <input type="text" id="track_bpm" placeholder="bpm" />
-        <button id="addnote"><span class="fontawesome-comment"></span></button>
+        </div>
+        <p class="add-artist">Artist:</p><input type="text" id="track_artist" placeholder="Artist" />
+        <p class="add-title">Title:</p>  <input type="text" id="track_title" placeholder="Title" />
+        <p class="add-bpm">BPM:</p>     <input type="text" id="track_bpm" placeholder="bpm" />
+        <p class="add-url">Url:</p>     <input type="text" id="track_url" placeholder="url" />
         <button id="submit_song"><span class="entypo-plus-circled"></span>Add Track</button>
+    <!--
+
+
+
+
+        <button id="addnote"><span class="fontawesome-comment"></span></button>
+    -->
         </form>
-        <hr />
+
     </script>
 
     <script type="text/template" id="listTemp">
@@ -87,6 +101,7 @@
         </form>
       </li>
     </script>
+
 
 
 

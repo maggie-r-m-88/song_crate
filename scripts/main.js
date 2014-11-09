@@ -10,7 +10,8 @@
       comments: '',
       artist: '',
       bpm: '',
-      number: ''
+      number: '',
+      url:''
     },
 
     initialize: function () {
@@ -108,6 +109,7 @@
         artist: $('#track_artist').val(),
         bpm: $('#track_bpm').val(),
         number: $('#track_number').val(),
+        url:$('#track_url').val(),
         comments: $('#track_comments').val()
       });
 
@@ -249,6 +251,7 @@
       'add' : 'addTrack',
       'list' : 'listTrack',
       'edit/:id' : 'editTrack'
+
     },
 
     home: function () {
@@ -279,7 +282,10 @@
   // Create Instance of Collection
   App.tracks = new App.Collections.Tracks();
 
-  // Fetch any server-side coffees
+
+
+  //talk to my router
+
   App.tracks.fetch().done( function () {
 
     App.router = new App.Routers.AppRouter();
@@ -287,10 +293,7 @@
   });
 
 
-//  $('#home').on('click', function(){
-//   $('.main').show(200);
 
-//  });
 
 
 
