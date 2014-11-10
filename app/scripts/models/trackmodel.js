@@ -1,8 +1,10 @@
 (function () {
 
-  App.Models.Track = Backbone.Model.extend({
+  App.Models.Track = Parse.Object.extend({
 
-    idAttribute: '_id',
+    className: 'tracks',
+
+    idAttribute: 'objectId',
 
     defaults: {
       name: '',

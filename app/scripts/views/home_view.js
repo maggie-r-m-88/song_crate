@@ -1,6 +1,6 @@
 (function () {
 
-  App.Views.Home = Backbone.View.extend({
+  App.Views.Home = Parse.View.extend({
 
     events: {
     //  'submit #addTrack' : 'addTrack'

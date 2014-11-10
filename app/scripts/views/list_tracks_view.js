@@ -1,6 +1,6 @@
 (function () {
 
-  App.Views.ListTrack = Backbone.View.extend({
+  App.Views.ListTrack = Parse.View.extend({
 
     tagName: 'ul',
     className: 'allTracks',

@@ -1,6 +1,6 @@
 (function () {
 
-  App.Views.AllTapes = Backbone.View.extend({
+  App.Views.AllTapes = Parse.View.extend({
 
     events: {
     //  'submit #addTrack' : 'addTrack'

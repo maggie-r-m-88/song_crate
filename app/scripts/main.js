@@ -1,3 +1,4 @@
+Parse.initialize("QIF9pYag8QklNOvzjJUS9Q7RK4pTfvgWXjJE2ojI", "KMa2VV4AwNoEne9bWjx1PXPGQbpYB0DqXQcoJXS5");
 (function () {
 
   // Create Instance of Collection
@@ -14,8 +15,7 @@
   });
 var test = [];
 var test = App.tracks.models;
-console.log(test)
-
+console.log(test);
 
 
 }());

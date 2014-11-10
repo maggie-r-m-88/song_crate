@@ -1,6 +1,6 @@
 (function () {
 
-  App.Views.AddTrack = Backbone.View.extend({
+  App.Views.AddTrack = Parse.View.extend({
 
     events: {
       'submit #addTrack' : 'addTrack'
@@ -25,17 +25,17 @@
         artist: $('#track_artist').val(),
         bpm: $('#track_bpm').val(),
         number: $('#track_number').val(),
-        url:$('#track_url').val(),
-        comments: $('#track_comments').val()
+        url:$('#track_url').val()
+
       });
 
-      App.tracks.add(c).save(null, {
-        success: function (){
+      c.save(null, {
+       success: function (){
+        App.tracks.add(c);
           App.router.navigate('list', { trigger: true });
         }
+       });
 
-
-      });
 
 
     }

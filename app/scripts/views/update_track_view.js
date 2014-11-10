@@ -1,6 +1,6 @@
 (function () {
 
-  App.Views.SingleTrack = Backbone.View.extend({
+  App.Views.SingleTrack = Parse.View.extend({
     //each track will be an li under this ul
     tagName: 'ul',
     className: 'trackSingle',
