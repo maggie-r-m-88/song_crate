@@ -3,6 +3,7 @@
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 @import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
+@import url(http://weloveiconfonts.com/api/?family=iconicstroke);
  //'Droid Sans', sans-serif;
 $freak:'Lato', sans-serif;
 $number: 'Arvo', serif;
@@ -22,7 +23,10 @@ $cool:'Francois One', sans-serif;
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
 }
-
+/* iconicstroke */
+[class*="iconicstroke-"]:before {
+  font-family: 'IconicStroke', sans-serif;
+}
 
 //colors pallette
 $darkgreen:   hsl(160,7,23);
@@ -222,7 +226,7 @@ box-shadow: 10px 40px 100px 20px #000000;
     height: 40px;
     margin-left: 360px;
     margin-top: 147px;
-    transition: background-color 0.5s ease;
+    transition: color 1.1s ease;
   }
   a:hover{
     background-color: hsla(160, 70%, 29%, 1);
@@ -499,6 +503,6 @@ width: 90px;
 }
 
 //purely dezine
-.fontawesome-trash,.fontawesome-fastforward, .fontawesome-music,.entypo-floppy, .entypo-plus-circled, .entypo-list, .entypo-home, .entypo-play{
+.fontawesome-trash,.iconicstroke-headphones,.fontawesome-fastforward, .fontawesome-music,.entypo-floppy, .entypo-plus-circled, .entypo-list, .entypo-home, .entypo-play{
   padding-right: 5px;
 }

@@ -12,9 +12,9 @@
     App.router = new App.Routers.AppRouter();
 
   });
-
-
-
+var test = [];
+var test = App.tracks.models;
+console.log(test)
 
 
 
