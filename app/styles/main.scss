@@ -501,7 +501,27 @@ width: 90px;
     }
   }
 }
+#genreText{
+  position: absolute;
+  color: black;
+  height: 50px;
+  width: 550px;
+  margin-top: 200px;
+}
+#addgenre{
+  position: absolute;
+  border: 1px solid $outline;
+  background-color: $darkgreen;
+  margin-top: 270px;
+}
+.genres {
+  color: white;
+  padding: 10px;
+  font-family: $number;
+  background-color: $darkgreen;
+  margin-top: 350px;
 
+}
 //purely dezine
 .fontawesome-trash,.iconicstroke-headphones,.fontawesome-fastforward, .fontawesome-music,.entypo-floppy, .entypo-plus-circled, .entypo-list, .entypo-home, .entypo-play{
   padding-right: 5px;

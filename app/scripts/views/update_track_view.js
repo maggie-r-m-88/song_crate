@@ -7,8 +7,8 @@
 
     events: {
       'submit #updateTrack' : 'updateTrack',
-      'click #delete' : 'deleteTrack'
-
+      'click #delete' : 'deleteTrack',
+      'submit #addGenre' : 'addGenre'
     },
 
     template: _.template($('#singleTemp').html()),
@@ -27,6 +27,36 @@
 
       this.$el.html(this.template(this.options.track.toJSON()));
 
+      var genreTemplate = _.template($('#genreTemp').html());
+      var genre_query = new Parse.Query(App.Models.Genre);
+      genre_query.equalTo('parent', this.options.tracks);
+
+      this.$el.append('<h2>Genre</h2><ul class="genres"></ul>');
+
+      genre_query.find({
+        success: function (results){
+          _.each(results, function(genre) {
+            $('ul.genres').append(genreTemplate(genre.toJSON()));
+          })
+        }
+      })
+    },
+
+    addGenre: function (e) {
+      e.preventDefault();
+
+      var genre = new App.Models.Genre({
+
+        genreText: $('#genreText').val(),
+        parent: this.options.track
+      });
+
+      genre.save(null, {
+        success: function () {
+          console.log('genre added');
+          App.router.navigate('list', {trigger: true});
+        }
+      });
     },
 
     updateTrack: function (e) {

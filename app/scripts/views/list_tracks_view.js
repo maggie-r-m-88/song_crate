@@ -9,7 +9,8 @@
 
     template: _.template($('#listTemp').html()),
 
-    initialize: function () {
+    initialize: function (options) {
+      this.options = options;
       this.render();
 
       this.collection.off();

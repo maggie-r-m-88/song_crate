@@ -14,7 +14,7 @@
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato:400,900|Arvo|Oswald|Roboto+Condensed:400,700|Raleway:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Righteous|Francois+One|Nunito' rel='stylesheet' type='text/css'>
-
+  <link rel="stylesheet" href="styles/animate.css">
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -101,6 +101,10 @@
 
     </script>
 
+ <script type="text/template" id="genreTemp">
+      <li><%= genreText %></li>
+    </script>
+
     <script type="text/template" id="listTemp">
       <li class="card" id="<%= objectId %>">
 
@@ -132,6 +136,11 @@
             <button id="delete"><span class="fontawesome-trash"></span>Delete</button>
 
         </form>
+
+         <form id="addGenre">
+          <input id="genreText" placeholder="Add Genre Here">
+          <button id="addgenre">Add Genre</button>
+        </form>
       </li>
     </script>
 
@@ -156,6 +165,7 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/models/trackmodel.js"></script>
+    <script src="scripts/models/genre_model.js"></script>
     <script src="scripts/collections/trackscollection.js"></script>
 
 
@@ -165,6 +175,7 @@
     <script src="scripts/views/update_track_view.js"></script>
     <script src="scripts/views/all_tapes_view.js"></script>
     <script src="scripts/routes/app_router.js"></script>
+
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>

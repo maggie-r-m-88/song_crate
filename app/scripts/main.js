@@ -18,4 +18,10 @@ var test = App.tracks.models;
 console.log(test);
 
 
+  
+  $('#trackList').addClass('animated zoomIn');
+
+
+
+
 }());
